@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        #orders_list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #orders_list li {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #orders_list li:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer input {
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            padding: 0 10px;
+            font-size: 16px;
+            margin-right: 15px;
+            min-width:  none;
+            width: 100%;
+        }
+
+        footer button {
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            padding: 0 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            cursor: pointer;
+            color: white;
+        }
+
+        footer button:hover {
+            background-color: #0056b3;
+        }
+
+        footer button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .order-attr-title {
+            font-weight: bold;
+            color: #999;
+        }
+
+        .order-attr-value {
+            font-weight: bold;
+        }   
+
+        .order-attr-divider {
+            margin: 0 20px;
+            background-color: #ccc;
+            width: 1px;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #robot-position-x {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #robot-position-y {
+            font-weight: bold;
+        }
+
+        #logout {
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            background-color: #ccc;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span id="robot-position-x">
+            X: 0
+        </span>
+        <span id="robot-position-y">
+            Y: 0
+        </span>
+    </header>
+    <ul id="orders_list">
+        
+    </ul>
+    <footer>
+        <input type="text" id="x" placeholder="X">
+        <input type="text" id="y" placeholder="Y">
+        <button id="submit-order-button">Submit</button>
+    </footer>
+    <a href="/logout" id="logout">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-door-open"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg>
+    </link>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
