@@ -1,7 +1,7 @@
 import auth from "./common/auth.js";
 import mqtt from 'https://unpkg.com/mqtt@5.5.0/dist/mqtt.esm'
 
-if (!auth.checkOwnCredentials()) window.location.href = '/login';
+if (!auth.checkOwnCredentials()) window.location.href = '/login.html';
 
 document.getElementById('submit-order-button').setAttribute('disabled', 'disabled');
 

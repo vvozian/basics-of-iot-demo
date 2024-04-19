@@ -1,6 +1,6 @@
 import auth from './common/auth.js';
 
-if (auth.checkOwnCredentials()) window.location.href = '/app';
+if (auth.checkOwnCredentials()) window.location.href = '/app.html';
 
 // Handler of submit button of login form
 const onSubmit = async (e) => {
@@ -9,11 +9,11 @@ const onSubmit = async (e) => {
     const password = document.getElementById('password').value;
 
     if (!auth.checkCredentials(username, password)) {
-        window.location.href = '/wrong_login';
+        window.location.href = '/wrong_login.html';
     } else {
 
     auth.setCredentials(username, password);
-    window.location.href = '/app';
+    window.location.href = '/app.html';
     }
 }
 
